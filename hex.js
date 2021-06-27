@@ -9,7 +9,7 @@ function getRandomNumber() {
 }
 
 btn.addEventListener("click", function () {
-   let hexColor = "#";
+   window.hexColor = "#";
    for (let i = 0; i < 6; i++) {
       hexColor += hex[getRandomNumber()];
    }
@@ -24,4 +24,12 @@ function copyIt() {
    /* Alert the copied text */
    let colorText = (color.textContent = "Copied!");
 }
-color.addEventListener("click", copyIt);
+color.addEventListener("mousedown", copyIt);
+
+color.addEventListener("mouseup", backToHex);
+
+ function backToHex() {
+   if (color.textContent = "Copied!") {
+      color.textContent = hexColor;
+   }
+ }
