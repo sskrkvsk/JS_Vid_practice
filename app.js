@@ -22,4 +22,4 @@ function copyIt() {
    /* Alert the copied text */
    alert("Copied the text: " + color.innerHTML);
 }
-color.addEventListener("click", copyIt);
+color.addEventListener("mousedown", copyIt);
